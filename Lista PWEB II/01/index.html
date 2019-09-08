@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>Lampada</title>
+    </head>
+
+	<body>
+    	<img id="l"   src="apagada.png" />
+    	<input type="button" onClick="acender();" name="acender" value="Acender">
+    	<input type="button" onClick="apagar();" name="apagar" value="Apagar">
+    </body>
+
+
+	<script type="text/javascript">
+		function acender() {
+				document.getElementById("l"). src ="acesa.png";
+		}
+
+		function apagar() {
+			document.getElementById("l"). src ="apagada.png";
+		}
+
+
+	</script>
+</html>

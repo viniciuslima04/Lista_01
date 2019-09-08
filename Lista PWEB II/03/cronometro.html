@@ -1,0 +1,61 @@
+<html>
+<head>
+	</head>
+	<body>
+		<form>
+		
+			<input type="button" value="Iniciar" onClick="contar()" />
+			
+			<input type="button" value="Parar" onClick="pararContagem()" />
+
+			<input type="button" value="Zerar" id="pare"/>
+
+			<input type="text" id="txt"/>
+
+
+		</form>
+	</body>
+</html>
+
+
+<script type="text/javascript">
+	var a=0;
+	var b;
+	var inicio=0;
+
+	function contaTempo()
+
+	{
+
+	document.getElementById('txt').value=a;
+		a=a+1;
+		b=setTimeout("contaTempo()",1000)
+	}
+
+	function contar()
+
+	{
+
+	if (!inicio)
+
+	{
+
+	inicio=1;
+
+	contaTempo();
+
+	}
+}
+	function pararContagem()
+
+	{
+	clearTimeout(b);
+		inicio=0;
+	}
+
+	var zerar = document.querySelector("#pare");
+
+	zerar.onclick = function(){
+		document.getElementById("txt").value = 0;
+	}
+</script>
